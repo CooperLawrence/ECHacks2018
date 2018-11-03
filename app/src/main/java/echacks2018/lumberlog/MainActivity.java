@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,8 +18,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import echacks2018.lumberlog.dummy.DummyContent;
 
@@ -64,9 +68,26 @@ public class MainActivity extends AppCompatActivity
                 String userId = mDatabase.push().getKey();
                 mDatabase.child(userId).setValue("Hello") ;
                 Toast.makeText(getApplicationContext(),"TEST",Toast.LENGTH_LONG).show();
+
+                mDatabase.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+
+                        for (DataSnapshot childDataSnapshot : dataSnapshot.getChildren()) {
+                            Log.e("TEST",""+ childDataSnapshot.getKey()); //displays the key for the node
+                        }
+                    }
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+
             }
         });
     }
+
+
 
     @Override
     public void onBackPressed() {
