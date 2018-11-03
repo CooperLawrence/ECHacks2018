@@ -63,25 +63,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                DatabaseReference mDatabase;
-                mDatabase = FirebaseDatabase.getInstance().getReference();
-                String userId = mDatabase.push().getKey();
-                mDatabase.child(userId).setValue("Hello") ;
-                Toast.makeText(getApplicationContext(),"TEST",Toast.LENGTH_LONG).show();
 
-                mDatabase.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-
-                        for (DataSnapshot childDataSnapshot : dataSnapshot.getChildren()) {
-                            Log.e("TEST",""+ childDataSnapshot.getKey()); //displays the key for the node
-                        }
-                    }
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });
 
             }
         });
