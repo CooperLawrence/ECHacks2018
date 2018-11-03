@@ -5,21 +5,21 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/tree_identifier"
             android:icon="@drawable/ic_nature_black_24dp"
-            android:title="Tree Identfier" />
+            android:title="@string/tree_identfier" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/tree_list"
             android:icon="@drawable/ic_nature_black_24dp"
-            android:title="Gallery" />
-        <item
+            android:title="@string/forest" />
+<!--        <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_nature_black_24dp"
             android:title="Slideshow" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_nature_black_24dp"
-            android:title="Tools" />
+            android:title="Tools" />-->
     </group>
 
     <item android:title="Communicate">
