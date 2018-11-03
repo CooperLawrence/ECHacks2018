@@ -14,8 +14,8 @@ import com.google.firebase.database.ValueEventListener;
 public class DatabaseManager implements ValueEventListener {
 
     private static DatabaseManager singleton  ;
-    private DatabaseReference mDatabase;
-
+    private DatabaseReference mDatabase ;
+    private Tree[] currentDatabase ;
 
     public static DatabaseManager getInstance(){
         if (singleton == null){
