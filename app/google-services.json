@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "935358700559",
+    "firebase_url": "https://echacks2018.firebaseio.com",
+    "project_id": "echacks2018",
+    "storage_bucket": "echacks2018.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935358700559:android:cd243cae7a99bd65",
+        "android_client_info": {
+          "package_name": "echacks2018.lumberlog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935358700559-c9cdp8t1f4jh2c0fdgpamnqlnc25i7v4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNyIwokRMPG4oQhs4N9mVrTirAqIoiSG4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
